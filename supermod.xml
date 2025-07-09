@@ -1,18 +1,27 @@
 <mod name="Better Server Browser"
-     description="Removes the 'friend-only' option and just lists both at the same time (public and friends-only)."
-     priority="900"
-     author="BangL"
-     contact="https://steamcommunity.com/id/BangL"
-     version="0.1"
-     color="60 60 60">
+    description="Removes the 'friend-only' option and just lists both at the same time (public and friends-only)."
+    priority="900"
+    author="BangL"
+    contact="https://steamcommunity.com/id/BangL"
+    version="0.2"
+    color="60 60 60">
     <updates>
         <update provider="modworkshop"
-                identifier="50230" />
+            identifier="50230" />
     </updates>
+    <localization directory="loc">
+        <!-- <loc file="chinese_simplified.json" language="chinese_simplified"/> -->
+        <loc file="english.json" language="english" />
+        <!-- <loc file="french.json" language="french"/>
+		<loc file="german.json" language="german"/>
+		<loc file="italian.json" language="italian"/>
+		<loc file="russian.json" language="russian"/>
+		<loc file="spanish.json" language="spanish"/> -->
+    </localization>
     <hooks>
         <post hook_id="lib/managers/menu/raid_menu/missionjoingui"
-              script_path="MissionJoinGui.lua" />
+            script_path="MissionJoinGui.lua" />
         <post hook_id="lib/network/matchmaking/networkmatchmakingsteam"
-              script_path="NetworkMatchMakingSTEAM.lua" />
+            script_path="NetworkMatchMakingSTEAM.lua" />
     </hooks>
 </mod>
