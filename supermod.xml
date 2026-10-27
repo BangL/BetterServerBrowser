@@ -1,4 +1,4 @@
-<mod name="Better Server Browser"
+<mod name="Better Server Browser" image="icon.png"
     description="Removes the 'friend-only' option and just lists both at the same time (public and friends-only)."
     priority="900"
     author="BangL"
