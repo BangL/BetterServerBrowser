@@ -3,7 +3,7 @@
     priority="900"
     author="BangL"
     contact="https://steamcommunity.com/id/BangL"
-    version="0.3"
+    version="0.3.1"
     color="60 60 60">
     <updates>
         <update identifier="betterserverbrowser">
