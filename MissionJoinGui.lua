@@ -12,7 +12,7 @@ Hooks:PostHook(MissionJoinGui, "_layout_filters",
 
         -- fix move pointers
         self._in_camp_servers_only._on_menu_move.up = "mission_filter_stepper"
-        self._mission_filter_stepper._on_menu_move.up = "in_camp_servers_only"
+        self._mission_filter_stepper._on_menu_move.down = "in_camp_servers_only"
     end
 )
 
@@ -36,6 +36,7 @@ Hooks:PostHook(MissionJoinGui, "_filters_set_selected_filters",
     "BetterServerBrowser_MissionJoinGui__filters_set_selected_filters",
     function(self)
         -- fix selection (vanilla selects friends-only here, so we select the next one: in_camp_servers)
+        self._friends_only_button:set_selected(false)
         self._in_camp_servers_only:set_selected(true)
     end
 )
@@ -212,8 +213,6 @@ function MissionJoinGui:_find_online_games_win32(friends_only)
     managers.network.matchmake:search_lobby(friends_only)
 
     local function usrs_f(success, amount)
-        print("usrs_f", success, amount)
-
         if success then
             self:set_players_online(amount)
         end
