@@ -7,7 +7,7 @@
     color="60 60 60">
     <updates>
         <update identifier="betterserverbrowser">
-            <host meta="https://raw.githubusercontent.com/BangL/raid-mods-meta/main/betterserverbrowser.json"/>
+            <host meta="https://raw.githubusercontent.com/BangL/raid-mods-meta/main/betterserverbrowser.json" patchnotes="https://github.com/BangL/BetterServerBrowser/blob/master/CHANGELOG.md"/>
         </update>
     </updates>
     <localization directory="loc">
